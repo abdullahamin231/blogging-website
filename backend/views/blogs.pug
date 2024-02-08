@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h2 All Blogs
+  if user
+    a(href="/blogs/create") Write a new blog
+  if blogs.length === 0
+    p No blogs
+  else
+    ul
+      each blog in blogs
+        li.ib
+          a(href="/blogs/" + blog._id)
+            | #{blog.title}
+          

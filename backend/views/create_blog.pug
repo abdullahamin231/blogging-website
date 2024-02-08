@@ -1,0 +1,17 @@
+extends layout 
+block content 
+    h1 Create a new blog
+    form(action="/blogs/create" method="POST")
+        p
+        label(for="title") Title:
+        br
+        input(type="text" name="title")
+        p
+        label(for="Content") Content:
+        br
+        textarea(name="content")
+        br
+        input(type="text" name="genre" placeholder="Genre")
+        p
+        input(type="submit" value="Submit")
+    

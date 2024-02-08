@@ -1,0 +1,30 @@
+extends layout 
+block content 
+    h1= blog.title 
+    p= blog.content
+    p= blog.genre
+    if user && blog.author && ((blog.author._id.toString() === user._id.toString()) || (user.username === "admin"))
+        a(href="/blogs/" + blog._id + "/edit") Edit
+        form(action="/blogs/" + blog._id + "/delete" method="POST")
+            input(type="submit" value="Delete")
+    else
+        p Written by #{blog.author.username}
+    h2 Comments 
+    if user
+        form(action="/blogs/" + blog._id + "/comments" method="POST")
+            textarea(name="comment_title" placeholder="Title" required) 
+            textarea(name="comment_body" placeholder="Body" required) 
+            input(type="submit" value="Add Comment")
+    else
+        p Please login to share your comments
+    .comments 
+        each comment in comments
+            ul  
+                li= comment.comment_title
+                li= comment.comment_body
+                li Written by #{comment.comment_author.username}
+                if user && comment.comment_author && ((comment.comment_author._id.toString() === user._id.toString()) || (user.username === "admin"))
+                    form(action="/blogs/" + blog._id + "/comments/" + comment._id + "/delete" method="POST")
+                        input(type="submit" value="Delete")
+    
+            
