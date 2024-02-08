@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         playfair: ['Playfair Display', 'serif'], // 'serif' as fallback
+        poppins: ['Poppins', 'serif'],
       },
       fontWeight: {
         // You can include all the font weights here

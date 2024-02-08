@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="py-8 flex font-mono flex-row items-center justify-center gap-40 mt-[32rem]  bg-black text-white text-center px-8 w-full ">
+        <footer className="py-8 flex font-poppins flex-row items-center justify-center gap-40 mt-[32rem] bg-black text-white text-center px-8 w-full ">
             <div id="left"  className="pb-5">
                 <p className="text-slate-500 text-sm font-bold text-left mb-2">DESIGN YOUR LIFE</p>
                 <p className="text-slate-200 text-xl font-bold text-left">Get in the Know</p>

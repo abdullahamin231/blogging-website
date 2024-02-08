@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function NavBar({ loggedUser }) {
     return (
-        <nav className="mx-auto mb-2 pt-2 text-center bg-yellow-400 text-gray-700 rounded-sm font-mono gap-1">
+        <nav className="mx-auto mb-2 pt-2 text-center bg-gray-100 text-slate-900 rounded-b-2xl font-mono gap-1">
 
             <div className="flex-grow text-center" >
                 <Link
@@ -15,15 +15,20 @@ export default function NavBar({ loggedUser }) {
             </div>
 
             <div className="mt-4">
-                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-semibold ml-3 hover:bg-slate-700 transition duration-250ms"
+                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-400 font-poppins ml-3 hover:bg-slate-700 transition duration-250ms"
                         to="/blogs">Blogs</Link>
-                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-semibold ml-3 hover:bg-slate-700 transition duration-250ms"
+                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-400 font-poppins ml-3 hover:bg-slate-700 transition duration-250ms"
                         to="/users">Users</Link>
-                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-semibold ml-3 hover:bg-slate-700 transition duration-250ms"
+                {
+                    loggedUser && loggedUser.username ? 
+                    <Link className="bg-slate-500 px-4 py-2 rounded-sm text-white font-400 font-poppins ml-3 hover:bg-slate-700 transition duration-250ms"
+                        to="/users">{loggedUser.username}</Link> : 
+                        <Link className="bg-slate-500 px-4 py-2 rounded-sm text-white font-400 font-poppins ml-3 hover:bg-slate-700 transition duration-250ms"
                         to="/users/login">Log In</Link>
-                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-semibold ml-3 hover:bg-slate-700 transition duration-250ms"
+                }
+                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-400 font-poppins ml-3 hover:bg-slate-700 transition duration-250ms"
                         to="/users/signup">Sign Up</Link>
-                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-semibold ml-3 hover:bg-slate-700 transition duration-250ms"
+                <Link   className="bg-slate-500 px-4 py-2 rounded-sm text-white font-400 font-poppins ml-3 hover:bg-slate-700 transition duration-250ms"
                         to="/users/logout">Log Out</Link>
             </div>
         </nav>
