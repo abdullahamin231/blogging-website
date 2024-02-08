@@ -4,6 +4,13 @@
 
 This is a full-stack blogging application built using the MERN stack, comprising MongoDB, Express.js, React.js, and Node.js. The app allows users to create, edit, and delete their blogs. It also provides user management functionalities, including signup, login, and user deletion. Users can browse through all blogs, view individual blog posts, and leave comments on them.
 
+[![My Skills](https://skillicons.dev/icons?i=html,tailwind,mongodb,express,react,node)](https://skillicons.dev)
+
+## Live Preview
+[Go to Youtube](https://youtu.be/CvYHiHCe7gI)
+
+
+
 ## Features
 
 - **User Authentication**: Users can sign up and log in securely to manage their blogs.
@@ -17,38 +24,29 @@ This is a full-stack blogging application built using the MERN stack, comprising
 - **Frontend**: React.js for building the user interface.
 - **Backend**: Node.js and Express.js for building the server and API.
 - **Database**: MongoDB for storing user data, blog posts, and comments.
-- **Authentication**: JSON Web Tokens (JWT) for secure user authentication.
+- **Authentication**: PassportJS for authenticating and hashing user logins and signup.
 
 ## Setup
 
-1. Clone the repository: `git clone https://github.com/your-username/mern-blogging-app.git`
+1. Clone the repository: `git clone https://github.com/abdullahamin231/mern-blogging-app.git`
 2. Navigate to the project directory: `cd mern-blogging-app`
 3. Install dependencies:
    - For the backend, navigate to the `backend` directory and run `npm install`.
    - For the frontend, navigate to the `frontend` directory and run `npm install`.
-4. Configure environment variables:
-   - Create a `.env` file in the `backend` directory.
-   - Add the following variables to the `.env` file:
-     ```
-     PORT=3001
-     MONGODB_URI=your_mongodb_uri
-     JWT_SECRET=your_jwt_secret
-     ```
-5. Start the backend server: In the `backend` directory, run `npm start`.
-6. Start the frontend server: In the `frontend` directory, run `npm start`.
-7. Access the application at `http://localhost:3000` in your web browser.
+4. Start the backend server: In the `backend` directory, run `npm start`.
+5. Start the frontend server: In the `frontend` directory, run `npm start`.
+6. Access the application at `http://localhost:5137` in your web browser.
 
 ## API Endpoints
 
-- **POST /api/auth/signup**: Register a new user.
-- **POST /api/auth/login**: Log in an existing user.
-- **GET /api/blogs**: Get all blogs.
-- **GET /api/blogs/:id**: Get a specific blog by ID.
-- **POST /api/blogs**: Create a new blog.
-- **PUT /api/blogs/:id**: Update a blog by ID.
-- **DELETE /api/blogs/:id**: Delete a blog by ID.
-- **GET /api/users**: Get all users (admin only).
-- **DELETE /api/users/:id**: Delete a user by ID (admin only).
+- **POST /users/signup**: Register a new user.
+- **POST /users/login**: Log in an existing user.
+- **GET /blogs**: Get all blogs.
+- **GET /blogs/:id**: Get a specific blog by ID.
+- **POST /blogs/create**: Create a new blog.
+- **PUT /blogs/:id**: Update a blog by ID.
+- **DELETE /blogs/:id/delete**: Delete a blog by ID.
+- **GET /users**: Get all users (admin only).
+- **DELETE /users/:id/delete**: Delete a user by ID (admin only || user themselves).
 
-## Folder Structure
 
