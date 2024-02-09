@@ -19,7 +19,7 @@ var app = express();
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://abdullahamin231:eAkqVexVw3DCBSD3@cluster0.cfczsr7.mongodb.net/blog?retryWrites=true&w=majority";
+const mongoDB = "mongodb+srv://abdullahamin231:password@cluster0.cfczsr7.mongodb.net/blog?retryWrites=true&w=majority";
 main().catch((err) => console.log(err));
 async function main() {
   console.log("connecting to database");
