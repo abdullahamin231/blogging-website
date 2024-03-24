@@ -7,9 +7,7 @@ This is a full-stack blogging application built using the MERN stack, comprising
 [![My Skills](https://skillicons.dev/icons?i=html,tailwind,mongodb,express,react,node)](https://skillicons.dev)
 
 ## Live Preview
-[Go to Youtube](https://youtu.be/CvYHiHCe7gI)
-
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/CvYHiHCe7gI/0.jpg)](https://www.youtube.com/watch?v=CvYHiHCe7gI)
 
 ## Features
 
